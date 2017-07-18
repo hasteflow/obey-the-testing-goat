@@ -1,0 +1,8 @@
+.*
+tddgoat
+__pycache__
+*.log
+*.sqlite3
+!.gitkeep
+!.gitignore
+
