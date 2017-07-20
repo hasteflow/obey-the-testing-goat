@@ -1,6 +1,7 @@
 .*
 tddgoat
 __pycache__
+*.pyc
 *.log
 *.sqlite3
 !.gitkeep
