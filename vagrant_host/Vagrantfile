@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+
+Vagrant.configure(2) do |config|
+
+    # create obey-the-testing-goat server
+    config.vm.define :server do |server_config|
+        server_config.vm.box = "ubuntu/xenial64"
+        server_config.vm.hostname = "tddgoatserver"
+        server_config.vm.network :private_network, ip: "10.0.15.10"
+        server_config.vm.network "forwarded_port", guest: 80, host: "8080"
+        #server_config.vm.network "forwarded_port", guest: 3307, host: "3306"
+        server_config.vm.provider "virtualbox" do |vb|
+            vb.memory = "3072"
+            vb.cpus = 4
+        end
+        server_config.vm.provision :shell, path: "bootstrap_tddgoat.sh"
+    end
+end
+
