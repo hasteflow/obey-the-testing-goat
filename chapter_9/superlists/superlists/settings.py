@@ -122,4 +122,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # renamed 'assets' instead of 'static' so we can gitignore it
-STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../assets'))
+STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../../../static'))
