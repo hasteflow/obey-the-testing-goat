@@ -65,7 +65,7 @@ def vagrant():
 
 
 def deploy():
-    chapter = 'chapter_9'
+    chapter = 'chapter_16'
     site_folder = f'/home/ubuntu/sites/tddgoat.me'
     source_folder = site_folder + '/source'
 
